@@ -1,0 +1,12 @@
+{
+    "BoltStore": {
+        "BucketName": "MyMQTT",
+        "OpenTimeout": 2,
+        "Logger": {
+            "Level": 5,
+            "JSON": true,
+            "ToFile": true,
+            "Filename": "boltstore.test.log"
+        }
+    }
+}

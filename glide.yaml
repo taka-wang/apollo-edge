@@ -1,0 +1,10 @@
+package: github.com/taka-wang/apollo-edge
+import:
+- package: github.com/boltdb/bolt
+  version: v1.3.1
+- package: github.com/eclipse/paho.mqtt.golang
+  version: v1.1.1
+  subpackages:
+  - packets
+testImport:
+- package: github.com/takawang/sugar

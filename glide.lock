@@ -1,0 +1,45 @@
+hash: aa4d688f69c99fae732eaea1cc6fec997a0896759b30e32e2a1090f1bab02ffa
+updated: 2018-06-19T10:31:23.411236365+08:00
+imports:
+- name: github.com/boltdb/bolt
+  version: 2f1ce7a837dcb8da3ec595b1dac9d0632f0f99e8
+- name: github.com/BurntSushi/toml
+  version: a368813c5e648fee92e5f6c30e3944ff9d5e8895
+- name: github.com/eclipse/paho.mqtt.golang
+  version: 36d01c2b4cbeb3d2a12063e4880ce30800af9560
+  subpackages:
+  - packets
+- name: github.com/fatih/camelcase
+  version: 44e46d280b43ec1531bb25252440e34f1b800b65
+- name: github.com/fatih/structs
+  version: ebf56d35bba727c68ac77f56f2fcf90b181851aa
+- name: github.com/koding/multiconfig
+  version: 69c27309b2d751c576b59ea9c3726597c2375da3
+- name: github.com/sirupsen/logrus
+  version: 75068beb13ada9c0ddde611f678523fda7352650
+- name: golang.org/x/crypto
+  version: 027cca12c2d63e3d62b670d901e8a2c95854feec
+  subpackages:
+  - ssh/terminal
+- name: golang.org/x/net
+  version: db08ff08e8622530d9ed3a0e8ac279f6d4c02196
+  subpackages:
+  - internal/socks
+  - proxy
+  - websocket
+- name: golang.org/x/sys
+  version: 56ede360ec1c541828fb88741b3f1049406d28f5
+  subpackages:
+  - unix
+  - windows
+- name: gopkg.in/yaml.v2
+  version: 5420a8b6744d3b0345ab293f6fcba19c978f1183
+testImports:
+- name: github.com/mattn/go-colorable
+  version: efa589957cd060542a26d2dd7832fd6a6c6c3ade
+- name: github.com/mattn/go-isatty
+  version: 6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c
+- name: github.com/mgutz/ansi
+  version: 9520e82c474b0a04dd04f8a40959027271bab992
+- name: github.com/takawang/sugar
+  version: 219befc585aece198a1baa584bfb421bdcb42d81
