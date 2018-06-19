@@ -1,0 +1,12 @@
+{
+    "BoltStore": {
+        "BucketName": "DB",
+        "OpenTimeout": 2,
+        "Logger": {
+            "Level": 3,
+            "JSON": false,
+            "ToFile": true,
+            "Filename": "helloworld"
+        }
+    }
+}
