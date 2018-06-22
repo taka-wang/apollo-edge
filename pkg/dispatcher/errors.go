@@ -4,7 +4,8 @@ import "errors"
 
 var (
 	// ErrLoadRouteFile fail to open the routing file
-	ErrLoadRouteFile = errors.New("failed to load route file")
-	// ErrRouteFormat the format of the route file is incorrect
-	ErrRouteFormat = errors.New("wrong route format")
+	ErrLoadRouteFile = errors.New("failed to load routing file")
+
+	// ErrRouteFormat the format of route file is incorrect
+	ErrRouteFormat = errors.New("the format of routing file is incorrect")
 )
