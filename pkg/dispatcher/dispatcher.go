@@ -42,7 +42,10 @@ data :=
 {
 	"routes": {
 		"sensorToFilter": "FROM /messages/modules/tempSensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/filtermodule/inputs/input1\")",
-		"filterToIoTHub": "FROM /messages/modules/filtermodule/outputs/output1 INTO $upstream"
+		"filterToIoTHub": "FROM /messages/modules/filtermodule/outputs/output1 INTO $upstream", // stamp
+		"xxx": "FROM /devices/hello/messages/events INTO $upstream", // stamp
+		"yyy": "FROM /devices/world/messages/events INTO BrokeredEndpoint(\"/modules/filtermodule/inputs/input2\")",
+		"zzz": "FROM /devices/world/messages/devicebound ===> world
 	}
 }
 `
@@ -102,14 +105,20 @@ func NewDispatcher(deviceID string, edgeHubConnStr string, cloudHubConnStr strin
 		id:       deviceID,
 		routeMap: loadRouteFile(""),
 		edgeHub: clientType{
-			subTopic: []string{"/msg/module/+/outputs/#"},
-			pubChan:  make(chan Msg),
-			client:   nil,
+			subTopic: []string{
+				"/messages/modules/+/outputs/#",
+				"/devices/+/messages/events",
+			},
+			pubChan: make(chan Msg),
+			client:  nil,
 		},
 		cloudHub: clientType{
-			subTopic: []string{"/devices/" + deviceID + "/messages/devicebound"},
-			pubChan:  make(chan Msg),
-			client:   nil,
+			subTopic: []string{
+				"/devices/" + deviceID + "/messages/devicebound",
+				// who are in my group?
+			},
+			pubChan: make(chan Msg),
+			client:  nil,
 		},
 	}
 	return dp
